@@ -1,0 +1,203 @@
+:root{
+    --blue: #008080;
+    --white: #FDFAFD;
+
+    --xs: 0.875rem;
+    --s: 1rem;
+    --m: 1.25rem;
+    --l: 1.875rem;
+    --xl: 2.25rem;
+    --shadow: 0px 4px 20px 0px rgba(0, 51, 51, 0.25);
+}
+
+body{
+    font-family: 'Roboto';
+    background: linear-gradient(0deg, rgba(0, 128, 128, 0.95) 0%, rgba(0, 128, 128, 0.95) 100%), url(https://images.unsplash.com/photo-1564939558297-fc396f18e5c7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1171&q=80), lightgray 50% / cover no-repeat;
+    color: var(--white);
+}
+
+h1{
+    font-size: var(--xl);
+    font-weight: bold;
+    margin-bottom: var(--s);
+    line-height: 100%;
+}
+
+.titulo{
+    font-size: var(--s);
+    font-weight: bold;
+    margin-bottom: var(--xs);
+}
+
+.contenedor{
+    max-width: 1000px;
+    margin: 100px auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+.contenedor section{
+    align-self: center;
+    max-width: 529px;
+    padding: 8px;
+}
+
+form{
+    background-color: var(--white);
+    padding: 48px;
+    border-radius: 6px;
+    box-shadow: var(--shadow);
+}
+
+form p, label,select, input{
+    color: var(--blue);
+}
+
+input::placeholder{
+    color: var(--blue);
+}
+
+input:hover, select:hover{
+    border: solid 3px #B1E4E6;
+}
+
+input:focus, select:focus,input:active, select:active{
+    border: solid 3px var(--blue);
+}
+
+input,select{
+    border: solid 1px var(--blue);
+    width: 100%;
+    padding: 10px;
+    border-radius: 8px;
+}
+
+
+
+.filltext{
+    margin-bottom: 16px;
+}
+
+.filltext label{
+    margin-bottom: 8px;
+}
+
+form .checkbox{
+    display: flex;
+    align-items: center;
+    margin-bottom: 16px;
+}
+
+.checkbox input{
+    height: 16px;
+    width: 16px;
+    margin-right: 8px;
+    cursor: pointer;
+}
+
+#miCheck:checked {
+    accent-color: var(--blue);
+}
+
+button{
+    background-color: var(--blue);
+    padding: 10px;
+    width: 100%;
+    border-radius: 6px;
+    color: var(--white)
+}
+
+button:hover{
+    background-color: #003D3D;
+    box-shadow: var(--shadow);
+    cursor: pointer;
+}
+
+
+.respuesta{
+    display: none;
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: auto;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0, 51, 51, 0.85);
+    place-content: center;
+}
+
+.respuesta_Card{
+    
+    width: 360px;
+    margin: 20px auto;
+    background-color: var(--white);
+    padding: 32px;
+    border-radius: 6px;
+    box-shadow: var(--shadow);
+
+}
+
+.respuesta_Card p{
+    color: var(--blue);
+}
+
+.respuesta_Card_seccion{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    text-align: center;
+    margin-bottom: 16px;
+}
+
+
+.total{
+    font-weight: bold;
+    font-size: var(--l);
+    margin: 8px 0;
+}
+
+.sub_total{
+    font-weight: bold;
+    font-size: var(--m);
+}
+
+.xs{
+    font-size: var(--xs);
+    max-width: 268px;
+    margin: auto;
+}
+
+.tabla{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 8px;
+}
+
+@media screen and (max-width: 576px) {
+
+    .contenedor{
+        width: 100%;
+        display: block;
+        box-sizing: border-box;
+        margin-top: 20px;
+    }
+
+    .section1 h1, .section1 p{
+        margin: 16px 24px;
+    }
+
+    .contenedor form{
+        margin: 0 24px;
+        padding: 24px;
+    }
+
+    .contenedor form .titulo{
+        margin: 0 0  16px 0;
+
+    }
+
+    .respuesta_Card{
+        width: 80%;
+    }
+}

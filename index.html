@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de Cuentas de cobro</title>
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/estilos.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <main class="contenedor">
+        <section class="section1">
+            <h1>Calculadora de cotizaciones</h1>
+            <p class="titulo">¿No sabes cuanto cobrar por un proyecto?</p>
+            <p class="text-body">Te ha pasado que al finalizar un proyecto envías tu cuenta de cobro y descubres que te descuentan un montón de dinero que no esperabas. <br> No te preocupes, tu dinos cuanto quieres que te quede libre y nosotros te decimos cuanto deberías cobrar (aproximadamente). </p>
+        </section>
+
+        <form action="">
+            <p class="titulo">Cuéntanos un poco más</p>
+            <div class="filltext">
+                <label for="ganancia">¿Cuanto quieres ganar?</label>
+                <input type="text" placeholder="Ingresa un valor" id="ganancia">
+            </div>
+
+            <div class="filltext">
+                <label for="arl">¿Cual actividad te define mejor ?</label>
+                <select name="Selecciona un valor" id="arl">
+                    <option selected disabled class="select-placeholder" value="0">Selecciona una actividad</option>
+                    <option value="0.0052">Trabajador de oficina, restaurantes, centros educativos</option>
+                    <option value="0.0104">Manufactura ligera (confección, agricola)</option>
+                    <option value="0.0244">Manufactura pesada </option>
+                    <option value="0.0435">Servicios de vigilancia</option>
+                    <option value="0.0696">Constucción, manejo de quimicos</option>
+                </select>
+            </div>
+
+            
+            <label class="checkbox" for="miCheck">
+                <input type="checkbox" name="" id="miCheck"> Debo presentar planilla
+            </label>
+
+            <button id="calcular" type="button">Calcular</button>
+            
+        </form>
+    </main>
+
+    <main class="respuesta" id="respuesta">
+        <section class="respuesta_Card">
+            <div class="respuesta_Card_seccion">
+                <p>Debes Cobrar</p>
+                <p class="total" id="rTotal"></p>
+                <p>Porque te van a descontar</p>
+            </div>
+
+            <div class="respuesta_Card_seccion">
+                <p>Seguridad social</p>
+                <p class="sub_total" id="rSeguridad"></p>
+                <div class="tabla">
+                    <p>Salud 12.5%</p>
+                    <p id="rSalud"></p>
+                </div>
+                <div class="tabla">
+                    <p>Pensión 16%</p>
+                    <p id="rPension"></p>
+                </div>
+                <div class="tabla">
+                    <p>ARL</p>
+                    <p id="rArl"></p>
+                </div>
+            </div>
+
+            <div class="respuesta_Card_seccion">
+                <p class="xs">Recuerda que la planilla la debes cotizar por el 40% de lo que cobraste o sea</p>
+                <p class="titulo" id="rIBC"></p>
+            </div>
+
+            
+            <div class="respuesta_Card_seccion">
+                <p>Retenciones</p>
+                <p class="sub_total" id="rTotalRetenciones"></p>
+                <div class="tabla">
+                    <p>ICA</p>
+                    <p id="rIca"></p>
+                </div>
+                <div class="tabla">
+                    <p>Retefuente</p>
+                    <p id="rRetefuente"></p>
+                </div>
+                <p class="xs">Estos  valores són estimados, pueden variar un poco</p>
+            </div>
+
+            <button type="reset" id="volver">Volver al inicio</button>
+        </section>
+    </main>
+
+    <script src="/funciones.js"></script>
+</body>
+</html>
