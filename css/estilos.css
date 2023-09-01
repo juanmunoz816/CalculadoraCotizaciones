@@ -24,7 +24,7 @@ h1{
 }
 
 .titulo{
-    font-size: var(--s);
+    font-size: var(--m);
     font-weight: bold;
     margin-bottom: var(--xs);
 }
@@ -49,16 +49,24 @@ form{
     box-shadow: var(--shadow);
 }
 
-form p, label,select, input{
+form p, label, input{
     color: var(--blue);
 }
 
-input::placeholder{
-    color: var(--blue);
+.filltext label{
+    font-weight: bold;
+}
+
+input::placeholder, select, .checkbox{
+    color: #7E9696;
 }
 
 input:hover, select:hover{
     border: solid 3px #B1E4E6;
+}
+
+.checkbox{
+    font-size: 14px;
 }
 
 input:focus, select:focus,input:active, select:active{
@@ -101,7 +109,7 @@ form .checkbox{
 
 button{
     background-color: var(--blue);
-    padding: 10px;
+    padding: 12px;
     width: 100%;
     border-radius: 6px;
     color: var(--white)
@@ -174,6 +182,7 @@ button:hover{
     margin-bottom: 8px;
 }
 
+
 @media screen and (max-width: 576px) {
 
     .contenedor{
@@ -182,6 +191,8 @@ button:hover{
         box-sizing: border-box;
         margin-top: 20px;
     }
+
+
 
     .section1 h1, .section1 p{
         margin: 16px 24px;
